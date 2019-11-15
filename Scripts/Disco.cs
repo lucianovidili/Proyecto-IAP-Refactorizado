@@ -51,7 +51,7 @@ public class Disco : MonoBehaviour
             direccion = new Vector3(0.0f, 0.0f, 0.0f);
             juego.golJugador1();
         }
-    }
+	}
 
 	void Update()
 	{
