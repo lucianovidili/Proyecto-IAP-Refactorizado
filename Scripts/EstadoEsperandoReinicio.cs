@@ -18,7 +18,6 @@ public class EstadoEsperandoReinicio : EstadoAbstracto
         if (Input.GetAxis("Mouse ScrollWheel") != 0.0f ||
              Input.GetButton("Fire2") ||
              Input.GetButton("Fire1"))
-            // estado = Estados.inicio;
-            juego.cambiarEstado(new EstadoInicio(juego));
+          juego.cambiarEstado(new EstadoInicio(juego));
     }
 }

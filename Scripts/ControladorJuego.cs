@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,11 +24,7 @@ public class ControladorJuego : MonoBehaviour
 
     void Start()
     {
-		// disco.desactivar();
-		// Instantiate(disco);
-        // Cursor.visible = false;
-        jugadoresConectados = 0;
-        // estado = Estados.inicio;
+		jugadoresConectados = 0;
         estado = new EstadoInicio(this);
     }
 
@@ -79,15 +75,12 @@ public class ControladorJuego : MonoBehaviour
 
     public void resetearDisco(float posicionDisco)
     {
-        // jugador1.setPosicion(0.0f, 0.0f, -6.4f);
-        // jugador2.setPosicion(0.0f, 0.0f, 6.4f);
         disco.setPosicion(0.0f, 0.0f, posicionDisco);
     }
 
     public void colisionDiscoJugador()
     {
         tiempo = Time.time;
-        // estado = Estados.jugando;
         cambiarEstado(new EstadoJugando(this));
     }
 
@@ -99,22 +92,18 @@ public class ControladorJuego : MonoBehaviour
     public void golJugador2()
     {
         golesJugador2++;
-        // estado = Estados.golJugador2;
         cambiarEstado(new EstadoGolJugador2(this));
     }
 
     public void golJugador1()
     {
         golesJugador1++;
-        // estado = Estados.golJugador1;
         cambiarEstado(new EstadoGolJugador1(this));
     }
 
     public bool sacaJugador2()
     {
-        // return estado == Estados.sacaJugador2;
-        //return (typeof(EstadoSacaJugador2) == estado.GetType());
-        return (typeof(EstadoSacaJugador2).Equals(estado.GetType()));
+        return (typeof(EstadoSacaJugador2).Equals(estado.GetType()));   // estado == Estados.sacaJugador2;
     }
 
     public void cambiarEstado(EstadoAbstracto estadoNuevo)

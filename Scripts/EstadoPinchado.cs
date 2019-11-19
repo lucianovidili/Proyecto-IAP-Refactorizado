@@ -25,7 +25,6 @@ public class EstadoPinchado : EstadoAbstracto
             juego.disco.activar();
             juego.managerGUI.setMensajeControl("");
             juego.resetearDisco(-3.2f);
-            // estado = Estados.sacaJugador1;
             juego.cambiarEstado(new EstadoSacaJugador1(juego));
         }
     }

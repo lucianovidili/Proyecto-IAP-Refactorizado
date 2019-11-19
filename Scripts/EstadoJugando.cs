@@ -19,7 +19,6 @@ public class EstadoJugando : EstadoAbstracto
         if (tiempo_actual - juego.tiempo > 7.0f)
         {
             juego.disco.setDireccion(0.0f, 0.0f, 0.0f);
-            //estado = Estados.pinchado;
             juego.cambiarEstado(new EstadoPinchado(juego));
         }
     }

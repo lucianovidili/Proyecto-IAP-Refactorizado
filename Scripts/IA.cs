@@ -1,13 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class IA : MonoBehaviour
 {
     public ControladorJuego juego;
-
     private Vector3 direccion;
-
     private float velocidad = 0.2f;
 
     private float movIzquierdaDerecha = 1;
